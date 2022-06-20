@@ -1,0 +1,36 @@
+[tool.poetry]
+name = "shotcraft"
+description = "Minecraft screenshot video recorder"
+version = "0.1.0"
+authors = ["Fyssion <fyssioncodes@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+keyboard = "^0.13.5"
+opencv-python = "^4.6.0"
+
+[tool.poetry.dev-dependencies]
+isort = "^5.10.1"
+black = "^22.3.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pyright]
+pythonPlatform = "Linux"
+venvPath = "venv"
+pythonVersion = "3.10"
+typeCheckingMode = "basic"
+useLibraryCodeForTypes = true
+
+[tool.black]
+line-length = 100
+skip-string-normalization = true
+
+[tool.isort]
+profile = "black"
+combine_as_imports = true
+combine_star = true
+line_length = 100
